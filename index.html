@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick Eliminator</title>
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <section id="start-game-section" class="overlay project-slidedown open">
+        <div class="text">
+            <h1>Tile Eliminator</h1>
+            <p class="preamble">Eliminate as many tiles as you can before time's out.</p>
+            <p class="preamble">Your current high score is <span id="start-game-high-score">0</span> points. Try to beat that!</p>
+            <img src="game.png" alt="bild på spelet">
+            <p><strong>RULES</strong></p>
+            <p>Click on a tile and hold down the mouse button while dragging the pointer horizontally or vertically on the same color of the tiles. When you release the mouse button, the selected tiles disappears and will be replaced by new ones.</p>
+        </div>
+        <div class="button">
+            <a id="start-game-btn" class="btn">Start game</a>
+        </div>
+    </section>
+    <section id="game-board-section">
+        <div id="timer-container" class="timer-wrapper">
+            <span>Time</span><br><span id="timer">30</span>
+        </div>
+        <div id="score-container" class="score-wrapper">
+            <span>Score</span><br><span id="score">0</span>
+        </div>
+        <div id="gameboard-container" class="gameboard-wrapper unselectable">  
+        </div>
+    </section>
+    <section id="finished-game-section" class="overlay project-slidedown unselectable">
+        <div class="text">
+            <h2>Your score this time was <span id="score-result"></span> points</h2>
+            <p id="finished-game-high-score"></p>
+        </div>
+        <div class="button">
+            <a id="new-game-btn" class="btn">Try again!</a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
